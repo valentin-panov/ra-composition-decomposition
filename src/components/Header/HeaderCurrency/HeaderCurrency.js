@@ -1,11 +1,19 @@
-/* eslint-disable no-unused-vars */
+/** SHOWS CURRENCY RATES STRING */
 import React from 'react';
-import PropTypes from 'prop-types';
+import HeaderCurrencyItem from './HeaderCurrencyItem/HeaderCurrencyItem';
 
-function HeaderCurrency(props) {
-  return <div className='HeaderCurrency'>{/* string of currencies */}</div>;
+function HeaderCurrency({ currencies, onClick }) {
+  return (
+    <ul className='HeaderCurrency'>
+      {currencies.map((currency) => (
+        <HeaderCurrencyItem
+          key={currency.id}
+          item={currency}
+          onClick={onClick}
+        />
+      ))}
+    </ul>
+  );
 }
-
-HeaderCurrency.propTypes = {};
 
 export default HeaderCurrency;

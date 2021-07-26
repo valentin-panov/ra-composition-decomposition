@@ -1,18 +1,16 @@
-/* eslint-disable no-unused-vars */
+/** RENDER ACTUAL WEATHER  */
 import React from 'react';
-import PropTypes from 'prop-types';
+
 import WeatherWidgetActualTemp from './WeatherWidgetActualTemp/WeatherWidgetActualTemp';
 import WeatherWidgetActualStatus from './WeatherWidgetActualStatus/WeatherWidgetActualStatus';
 
-function WeatherWidgetActual(props) {
+function WeatherWidgetActual({ props }) {
   return (
     <div className='WeatherWidgetActual'>
-      <WeatherWidgetActualStatus />
-      <WeatherWidgetActualTemp />
+      <WeatherWidgetActualStatus status={props.status} />
+      <WeatherWidgetActualTemp temp={props.temp} />
     </div>
   );
 }
-
-WeatherWidgetActual.propTypes = {};
 
 export default WeatherWidgetActual;

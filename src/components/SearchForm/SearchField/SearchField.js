@@ -1,5 +1,11 @@
+/** RENDERS SEARCH FIELD */
 import React from 'react';
 
 export default function SearchField() {
-  return <div className='SearchField'>{/* input field */}</div>;
+  return (
+    <form className='SearchField'>
+      <input></input>
+      {/* задачи сделать это функциональным не стоит же? */}
+    </form>
+  );
 }

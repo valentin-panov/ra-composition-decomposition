@@ -1,12 +1,15 @@
-/* eslint-disable no-unused-vars */
+/** RENDERS EVERY ITEM OF TV SHEET */
 import React from 'react';
-import PropTypes from 'prop-types';
 
-function TVSheetWidgetItem(props) {
-  const { time, title, channel } = props;
-  return <li className='TVSheetWidgetItem'>{/* time, title, channel */}</li>;
+function TVSheetWidgetItem({ item }) {
+  const { time, title, channel } = item;
+  return (
+    <li className='TVSheetWidgetItem'>
+      <span>{time}&nbsp;</span>
+      <span>{title}&nbsp;</span>
+      <span>{channel}&nbsp;</span>
+    </li>
+  );
 }
-
-TVSheetWidgetItem.propTypes = {};
 
 export default TVSheetWidgetItem;

@@ -1,12 +1,18 @@
+/** RENDERS POPELAR WIDGET */
+
 import React from 'react';
 import PopularWidgetItem from './PopularWidgetItem/PopularWidgetItem';
+import WidgetTitle from '../WidgetTitle/WidgetTitle';
 
-export default function PopularWidget(props) {
+export default function PopularWidget({ popular }) {
+  const { title, items } = popular;
   return (
     <div className='PopularWidget'>
-      {/* <h2>{props.widget.title}</h2> */}
+      <WidgetTitle text={title} />
       <ul className='PopularWidget_list'>
-        <PopularWidgetItem props={props} />
+        {items.map((item) => (
+          <PopularWidgetItem key={item.id} item={item} />
+        ))}
       </ul>
     </div>
   );

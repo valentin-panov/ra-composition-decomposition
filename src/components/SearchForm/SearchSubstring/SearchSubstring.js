@@ -1,9 +1,11 @@
+/** RENDERS STRING UNDER SEARCH INPUT */
 import React from 'react';
 
-export default function SearchSubstring(props) {
+export default function SearchSubstring({ searchSubstring }) {
   return (
     <div className='SearchSubstring'>
-      {/* everything will be found, props.searchSubstring */}
+      <span>{searchSubstring[0]}</span>
+      <span>{searchSubstring[1]}</span>
     </div>
   );
 }

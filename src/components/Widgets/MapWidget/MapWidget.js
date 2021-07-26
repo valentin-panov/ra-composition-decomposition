@@ -1,10 +1,14 @@
+/** SHOWS MAP WIDGET */
 import React from 'react';
+import WidgetTitle from '../WidgetTitle/WidgetTitle';
+import WidgetSubTitle from '../WidgetSubTitle/WidgetSubTitle';
 
-export default function MapWidget(props) {
+export default function MapWidget({ maps }) {
+  const { title, item } = maps;
   return (
     <div className='MapWidget'>
-      {/* <h2>{props.widget.title}</h2> */}
-      {/* content */}
+      <WidgetTitle text={title} />
+      <WidgetSubTitle text={item} />
     </div>
   );
 }

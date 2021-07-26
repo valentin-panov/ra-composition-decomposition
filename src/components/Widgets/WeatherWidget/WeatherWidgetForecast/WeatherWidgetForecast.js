@@ -1,11 +1,14 @@
-/* eslint-disable no-unused-vars */
+/** SHOWS FORECAST */
 import React from 'react';
-import PropTypes from 'prop-types';
 
-function WeatherWidgetForecast(props) {
-  return <div className='WeatherWidgetForecast'></div>;
+function WeatherWidgetForecast({ props }) {
+  return (
+    <div className='WeatherWidgetForecast'>
+      <span>{props.close}</span>
+      <br />
+      <span>{props.far}</span>
+    </div>
+  );
 }
-
-WeatherWidgetForecast.propTypes = {};
 
 export default WeatherWidgetForecast;

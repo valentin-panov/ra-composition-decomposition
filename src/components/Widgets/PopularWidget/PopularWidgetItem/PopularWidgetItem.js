@@ -1,10 +1,11 @@
 import React from 'react';
 
-export default function PopularWidgetItem(props) {
-  const { title, subtitle } = props;
+export default function PopularWidgetItem({ item }) {
+  const { theme, name } = item;
   return (
     <li className='PopularWidgetItem'>
-      {title} - {subtitle}
+      <span>{theme}&nbsp;-</span>
+      <span>&nbsp;{name}</span>
     </li>
   );
 }

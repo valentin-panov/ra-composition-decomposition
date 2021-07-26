@@ -1,15 +1,17 @@
+/** now on the air widget */
 import React from 'react';
 import OnlineWidgetItem from './OnlineWidgetItem/OnlineWidgetItem';
+import WidgetTitle from '../WidgetTitle/WidgetTitle';
 
-export default function OnlineWidget(props) {
-  // now on the air widget
+export default function OnlineWidget({ online }) {
+  const { title, items } = online;
   return (
     <div>
-      {/* <h2>{props.widget.title}</h2> */}
+      <WidgetTitle text={title} />
       <ul className='OnlineWidget'>
-        <OnlineWidgetItem />
-        <OnlineWidgetItem />
-        <OnlineWidgetItem />
+        {items.map((item) => (
+          <OnlineWidgetItem key={item.id} item={item} />
+        ))}
       </ul>
     </div>
   );
